@@ -256,6 +256,7 @@ use stream::CommandStreamExt as _;
 pub use builder::{NotificationBuilder, RequestBuilder, StreamBuilder};
 pub use context::CommandContext;
 pub use stream::CommandOutput;
+pub use executor::JoinHandle;
 
 use crate::Request;
 use crate::capability::Operation;

@@ -114,7 +114,8 @@ impl JoinHandle {
         self.aborted.store(true, Ordering::Release);
     }
 
-    pub(crate) fn is_finished(&self) -> bool {
+    #[must_use]
+    pub fn is_finished(&self) -> bool {
         self.finished.load(Ordering::Acquire)
     }
 }
